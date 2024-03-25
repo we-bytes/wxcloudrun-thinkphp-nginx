@@ -81,7 +81,7 @@ class Api
 
     /**
      * http://127.0.0.1:8000/api/getkey?keywords=inject gadget hobby velvet sight knock exist slam gadget member spoil stadium
-     * 区块链 助记词 转换成 btc 私钥 和 polygon 私钥 ，并查询 对应余额 的 demo
+     * 区块链 助记词 转换成 btc 私钥 和 eth 私钥 ，并查询 对应余额 的 demo(主币 或者 代币)
      * @return Json
      */
     public function getKey($keywords)
