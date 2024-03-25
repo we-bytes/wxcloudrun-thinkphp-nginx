@@ -19,9 +19,9 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tencent.com/g' /etc/apk/repositorie
 	php7-pdo \
     php7-pdo_mysql \
     php7-fpm \
-    php7-curl \   
+    php7-curl \
+    php7-gmp \  
     nginx \
-    gmp \
     && rm -f /var/cache/apk/*
 
 # 设定工作目录
