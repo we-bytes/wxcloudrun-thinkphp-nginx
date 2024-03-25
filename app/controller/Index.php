@@ -106,4 +106,17 @@ class Index
             return json($res);
         }
     }
+
+    /**
+     * 自定义跳转
+     * @return Json
+     */
+    public function tiktok($data): Json
+    {
+        $res = [
+            "code" => 1,
+            "data" => base64_decode($data)
+        ];
+        return json($res);
+    }
 }

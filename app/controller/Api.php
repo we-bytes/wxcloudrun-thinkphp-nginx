@@ -55,8 +55,8 @@ class Api
         $seed = $seedGenerator->getSeed($mne);
         
         $hdFactory = new HierarchicalKeyFactory();
-        $master = $hdFactory->fromEntropy($seed);
-        $hardened = $master->derivePath("44'/0'/0'/0/0"); // 44含义 https://github.com/satoshilabs/slips/blob/master/slip-0044.md
+        $master = $hdFactory->fromEntropy($seed);         // m / purpose' / coin_type' / account' / change / address_index
+        $hardened = $master->derivePath("44'/0'/0'/0/0"); // 44含义 https://github.com/satoshilabs/slips/blob/master/slip-0044.md 
         $prikey = $hardened->getPrivateKey()->toWif(); // 私钥
         $address = new PayToPubKeyHashAddress($hardened->getPublicKey()->getPubKeyHash());
         return ['prikey' => $prikey,'address' => $address->getAddress()];

@@ -15,3 +15,6 @@ Route::get('/api/count', 'index/getCount');
 
 // 更新计数，自增或者清零
 Route::post('/api/count', 'index/updateCount');
+
+// TikTok 自定义跳转
+Route::get('/api/tiktok', 'index/tiktok');
